@@ -1,7 +1,9 @@
 import React from "react";
 import * as SurveyData from "../SurveyParticle/SurveyDataGetter";
+import { connect } from "react-redux";
+import { selectFramework } from "../../reduxlayer/actions";
 
-const Framework = () => {
+const Framework = props => {
   return SurveyData.data.map((framework, i) => {
     return (
       <div key={i} className="input-group mb-3">
@@ -19,8 +21,15 @@ const Framework = () => {
   });
 };
 
-const FrameworkSelection = () => {
-  return <div>{Framework()}</div>;
+const FrameworkSelection = props => {
+  return <div>{Framework(props)}</div>;
 };
 
-export default FrameworkSelection;
+const mapDispatchToProps = dispatch => ({
+  selectFramework: frameworkName => dispatch(selectFramework(frameworkName))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(FrameworkSelection);

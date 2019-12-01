@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 // import * as SurveyData from "./components/SurveyParticle/SurveyDataGetter";
 import FrameworkSelection from "./components/FrameworkSelection";
 import "./App.css";
+import { connect } from "react-redux";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <form>
@@ -19,4 +20,11 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  surveyData: state.surveyData
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(App);
