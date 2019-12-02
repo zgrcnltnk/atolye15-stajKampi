@@ -1,17 +1,20 @@
 import React from "react";
 import * as SurveyData from "../SurveyParticle/SurveyDataGetter";
 import { connect } from "react-redux";
-import { selectFramework } from "../../reduxlayer/actions";
+import { selectFramework, getQuestions } from "../../reduxlayer/actions";
 
 const Framework = props => {
   return SurveyData.data.map((framework, i) => {
     return (
       <div key={i} className="input-group mb-3">
         <div className="input-group-prepend">
-          <div className="input-group-text">
+          <div className="input-group-text ">
             <input
               type="checkbox"
-              aria-label="Checkbox for following text input"
+              onChange={() => {
+                props.selectFramework(framework.name, i);
+                props.getQuestions(i);
+              }}
             />
           </div>
         </div>
@@ -21,15 +24,35 @@ const Framework = props => {
   });
 };
 
-const FrameworkSelection = props => {
-  return <div>{Framework(props)}</div>;
+const Question = props => {
+  return props.questionsData.map((node, i) => {
+    return node.questions.map((q, i) => {
+      return <div key={i}>{q.question}</div>;
+    });
+  });
 };
 
+const FrameworkSelection = props => {
+  return (
+    <div>
+      {Framework(props)} {Question(props)}
+    </div>
+  );
+};
+
+const mapStateToProps = state => ({
+  frameworkSelected: state.frameworkSelected,
+  frameworkIDsArr: state.frameworkIDsArr,
+  questionsData: state.questionsData
+});
+
 const mapDispatchToProps = dispatch => ({
-  selectFramework: frameworkName => dispatch(selectFramework(frameworkName))
+  selectFramework: (frameworkName, i) =>
+    dispatch(selectFramework(frameworkName, i)),
+  getQuestions: frameworkID => dispatch(getQuestions(frameworkID))
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(FrameworkSelection);
