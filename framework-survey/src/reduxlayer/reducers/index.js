@@ -1,3 +1,4 @@
+import fill from "lodash.fill";
 const data = require("../../components/SurveyParticle/surveydata.json");
 
 const reducer = (
@@ -5,7 +6,10 @@ const reducer = (
     questionsData: [],
     frameworkIDsArr: [],
     surveyData: data,
-    frameworkSelected: false
+    frameworkSelected: false,
+    questionsVisArr: [],
+    questionCount: 0,
+    q: []
   },
   action
 ) => {
@@ -17,10 +21,18 @@ const reducer = (
         myIDs: state.frameworkIDsArr.push(action.frameworkID)
       };
 
-    case "GET_QUESTIONS":
+    case "GET_QUESTIONS": {
       return {
         ...state,
-        questionArr: state.questionsData.push(data[action.selected])
+        questionArr: state.questionsData.push(data[action.selected]),
+        questionCount:
+          state.questionCount + data[action.selected].questions.length,
+        q: state.questionsData.push(data[action.selected])
+      };
+    }
+    case "SHOW_NEXT_QUESTION":
+      return {
+        ...state
       };
 
     default:
