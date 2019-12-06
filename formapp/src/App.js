@@ -1,36 +1,62 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addToQuestions, addToAnswers } from "./reduxlayer/actions";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SubmissionScreen from "./components/SubmissionScreen";
 import "./App.css";
 
 function App(props) {
   const [counter, setCounter] = useState(0);
   const [other, showOther] = useState(false);
+  const [submitButtonVis, setSubmitButtonVis] = useState(true);
 
   const OtherOption = props => {
-    return other === true ? <input type="text" /> : <div></div>;
+    return (
+      <div className="input-group mb-3">
+        <div className="input-group-prepend">
+          <button
+            className="btn btn-outline-success"
+            type="button"
+            disabled={submitButtonVis}
+            onClick={() => {}}
+          >
+            Gönder
+          </button>
+        </div>
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Yorum yaz.."
+          onChange={e => {
+            if (e.target.value !== "") setSubmitButtonVis(false);
+            else setSubmitButtonVis(true);
+          }}
+        />
+      </div>
+    );
   };
 
   const Quest = props => {
     return props.qIndex ? (
-      <div>
+      <ul className="list-group">
         {props.questions[counter].question}
         {props.questions[counter].anwers.map((a, i) => (
-          <button
-            key={i}
-            onClick={() => {
-              if (counter < props.qIndex - 1) {
+          <li key={i} className="list-group-item">
+            <button
+              className="btn btn-info"
+              key={i}
+              onClick={() => {
                 setCounter(counter + 1);
-              }
-              props.addToAnswers(props.questions[counter].question, a);
-            }}
-          >
-            {a}
-          </button>
+                props.addToAnswers(props.questions[counter].question, a);
+              }}
+            >
+              {a}
+            </button>
+          </li>
         ))}
-      </div>
+      </ul>
     ) : (
-      <div>Framework seçimi yap</div>
+      <ul>Framework seçimi yap..</ul>
     );
   };
 
@@ -56,11 +82,15 @@ function App(props) {
     });
   };
   return (
-    <div className="App">
-      {Framework(props)}
-      {Quest(props)}
-      {OtherOption(props)}
-    </div>
+    <Router>
+      <div className="App">
+        {Framework(props)}
+        {counter < props.qIndex && Quest(props)}
+        {((counter !== 0 && counter === props.qIndex) || other === true) &&
+          OtherOption(props)}
+        <Route path="/submission" component={SubmissionScreen} />
+      </div>
+    </Router>
   );
 }
 
