@@ -1,7 +1,14 @@
 const data = require("../../surveydata.json");
 
 const reducer = (
-  state = { data: data, questions: [], qIndex: 0, answers: [] },
+  state = {
+    data: data,
+    questions: [],
+    qIndex: 0,
+    answers: [],
+    counter: 0,
+    otherVis: false
+  },
   action
 ) => {
   switch (action.type) {
@@ -20,11 +27,22 @@ const reducer = (
       };
     }
     case "ADD_TO_ANSWERS": {
-      var obj = { question: action.question, answer: action.answer };
+      var obj = {
+        question: action.question,
+        answer: action.answer
+      };
       console.log(obj);
       return {
         ...state,
-        answers: state.answers.concat(obj)
+        answers: state.answers.concat(obj),
+        counter: state.counter + 1
+      };
+    }
+
+    case "CHANGE_OTHER_VIS": {
+      return {
+        ...state,
+        otherVis: action.value
       };
     }
     default:

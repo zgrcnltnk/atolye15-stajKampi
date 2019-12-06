@@ -1,8 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 
-class SubmissionScreen extends Component {
-  render() {
-    return <div>asd</div>;
-  }
-}
+const SubmissionScreen = () => {
+  return <div>ozgr</div>;
+};
 export default SubmissionScreen;

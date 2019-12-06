@@ -8,3 +8,8 @@ export const addToAnswers = (q, a) => ({
   question: q,
   answer: a
 });
+
+export const showOtherOpt = value => ({
+  type: "CHANGE_OTHER_VIS",
+  value: value
+});
