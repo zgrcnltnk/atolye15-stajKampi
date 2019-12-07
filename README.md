@@ -2,6 +2,8 @@
 
 Used React & Redux.
 
+30.11.2019
+
 ### `npm i`
 
 ### `npm start`
