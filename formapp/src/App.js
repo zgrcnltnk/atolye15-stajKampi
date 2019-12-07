@@ -3,9 +3,6 @@ import { connect } from "react-redux";
 import { addToQuestions, addToAnswers } from "./reduxlayer/actions";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import SubmissionScreen from "./components/SubmissionScreen";
-// import Framework from "./components/Framework";
-// import Quest from "./components/Quest";
-// import OtherOption from "./components/OtherOption";
 import Form from "./components/Form";
 import "./App.css";
 
@@ -14,7 +11,12 @@ function App(props) {
     <div className="App">
       <Router>
         <Route path="/" exact component={Form} />
-        <Route path="/submission" component={SubmissionScreen} />
+        <Route
+          path="/submission"
+          render={props => (
+            <SubmissionScreen object={props.answers} {...props} />
+          )}
+        />
       </Router>
     </div>
   );
@@ -25,7 +27,8 @@ const mapStateToProps = state => ({
   qIndex: state.qIndex,
   questions: state.questions,
   counter: state.counter,
-  otherVis: state.otherVis
+  otherVis: state.otherVis,
+  answers: state.answers
 });
 
 const mapDispatchToProps = dispatch => ({

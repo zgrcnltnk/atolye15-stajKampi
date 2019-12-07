@@ -13,3 +13,8 @@ export const showOtherOpt = value => ({
   type: "CHANGE_OTHER_VIS",
   value: value
 });
+
+export const updateCommentText = text => ({
+  type: "UPDATE_COMMENT_TEXT",
+  text: text
+});

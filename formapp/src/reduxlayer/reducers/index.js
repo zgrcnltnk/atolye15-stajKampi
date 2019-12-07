@@ -7,7 +7,8 @@ const reducer = (
     qIndex: 0,
     answers: [],
     counter: 0,
-    otherVis: false
+    otherVis: false,
+    comment: ""
   },
   action
 ) => {
@@ -43,6 +44,13 @@ const reducer = (
       return {
         ...state,
         otherVis: action.value
+      };
+    }
+
+    case "UPDATE_COMMENT_TEXT": {
+      return {
+        ...state,
+        comment: action.text
       };
     }
     default:
