@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/atolye15-stajKampi/static/css/main.b100e6da.chunk.css",
+    "main.js": "/atolye15-stajKampi/static/js/main.af90d608.chunk.js",
+    "main.js.map": "/atolye15-stajKampi/static/js/main.af90d608.chunk.js.map",
+    "runtime-main.js": "/atolye15-stajKampi/static/js/runtime-main.340eb583.js",
+    "runtime-main.js.map": "/atolye15-stajKampi/static/js/runtime-main.340eb583.js.map",
+    "static/js/2.f70500f2.chunk.js": "/atolye15-stajKampi/static/js/2.f70500f2.chunk.js",
+    "static/js/2.f70500f2.chunk.js.map": "/atolye15-stajKampi/static/js/2.f70500f2.chunk.js.map",
+    "index.html": "/atolye15-stajKampi/index.html",
+    "precache-manifest.c5e2e8b61b315b70aa67ee58b90c3f17.js": "/atolye15-stajKampi/precache-manifest.c5e2e8b61b315b70aa67ee58b90c3f17.js",
+    "service-worker.js": "/atolye15-stajKampi/service-worker.js",
+    "static/css/main.b100e6da.chunk.css.map": "/atolye15-stajKampi/static/css/main.b100e6da.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.340eb583.js",
+    "static/js/2.f70500f2.chunk.js",
+    "static/css/main.b100e6da.chunk.css",
+    "static/js/main.af90d608.chunk.js"
+  ]
+}
