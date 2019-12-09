@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/atolye15-stajKampi/static/css/main.b100e6da.chunk.css",
-    "main.js": "/atolye15-stajKampi/static/js/main.3e23f686.chunk.js",
-    "main.js.map": "/atolye15-stajKampi/static/js/main.3e23f686.chunk.js.map",
+    "main.js": "/atolye15-stajKampi/static/js/main.9ca238f1.chunk.js",
+    "main.js.map": "/atolye15-stajKampi/static/js/main.9ca238f1.chunk.js.map",
     "runtime-main.js": "/atolye15-stajKampi/static/js/runtime-main.202a9e19.js",
     "runtime-main.js.map": "/atolye15-stajKampi/static/js/runtime-main.202a9e19.js.map",
-    "static/js/2.b81c1fd8.chunk.js": "/atolye15-stajKampi/static/js/2.b81c1fd8.chunk.js",
-    "static/js/2.b81c1fd8.chunk.js.map": "/atolye15-stajKampi/static/js/2.b81c1fd8.chunk.js.map",
+    "static/js/2.b56eef52.chunk.js": "/atolye15-stajKampi/static/js/2.b56eef52.chunk.js",
+    "static/js/2.b56eef52.chunk.js.map": "/atolye15-stajKampi/static/js/2.b56eef52.chunk.js.map",
     "index.html": "/atolye15-stajKampi/index.html",
-    "precache-manifest.749b62342bdd2000a0cd36a3ead17b6f.js": "/atolye15-stajKampi/precache-manifest.749b62342bdd2000a0cd36a3ead17b6f.js",
+    "precache-manifest.41b42112e3b6e0c94bc17c9549161320.js": "/atolye15-stajKampi/precache-manifest.41b42112e3b6e0c94bc17c9549161320.js",
     "service-worker.js": "/atolye15-stajKampi/service-worker.js",
     "static/css/main.b100e6da.chunk.css.map": "/atolye15-stajKampi/static/css/main.b100e6da.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.202a9e19.js",
-    "static/js/2.b81c1fd8.chunk.js",
+    "static/js/2.b56eef52.chunk.js",
     "static/css/main.b100e6da.chunk.css",
-    "static/js/main.3e23f686.chunk.js"
+    "static/js/main.9ca238f1.chunk.js"
   ]
 }
