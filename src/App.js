@@ -9,7 +9,7 @@ import "./App.css";
 function App(props) {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Route path="/" exact component={Form} />
         <Route
           path="/submission"
