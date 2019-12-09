@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addToQuestions, addToAnswers } from "./reduxlayer/actions";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import SubmissionScreen from "./components/SubmissionScreen";
 import Form from "./components/Form";
 import "./App.css";
@@ -9,15 +9,11 @@ import "./App.css";
 function App(props) {
   return (
     <div className="App">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Route path="/" exact component={Form} />
-        <Route
-          path="/submission"
-          render={props => (
-            <SubmissionScreen object={props.answers} {...props} />
-          )}
-        />
-      </BrowserRouter>
+      <Route path="/" exact component={Form} />
+      <Route
+        path="/submission"
+        render={props => <SubmissionScreen object={props.answers} {...props} />}
+      />
     </div>
   );
 }

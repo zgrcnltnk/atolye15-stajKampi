@@ -1,4 +1,4 @@
-**Basic form initializer project that I created in Atölye15 bootcamp 30.11.2019.**
+**Basic form initializer project that I created in Atölye15 code bootcamp 30.11.2019.**
 
 Used React & Redux.
 
