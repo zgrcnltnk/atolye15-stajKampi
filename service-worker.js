@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/atolye15-stajKampi/precache-manifest.41b42112e3b6e0c94bc17c9549161320.js"
+  "/atolye15-stajKampi/precache-manifest.3403887b03e47e472d114ae563feee5f.js"
 );
 
 self.addEventListener('message', (event) => {

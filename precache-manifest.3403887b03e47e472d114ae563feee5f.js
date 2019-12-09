@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d59ebdbc2164b802f405566a243149f3",
+    "revision": "902972c43fccabf13d61991656749252",
     "url": "/atolye15-stajKampi/index.html"
   },
   {
