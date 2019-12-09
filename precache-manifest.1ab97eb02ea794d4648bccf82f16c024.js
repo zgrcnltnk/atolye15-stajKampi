@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "69282efb1533e87a78b555ac62cfc240",
+    "revision": "69c2e8d832ac5f960222315d8ed56b6c",
     "url": "/atolye15-stajKampi/index.html"
   },
   {
-    "revision": "ca023f0364e834220fa5",
+    "revision": "d3e860fe2875b6f2210f",
     "url": "/atolye15-stajKampi/static/css/main.b100e6da.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/atolye15-stajKampi/static/js/2.b81c1fd8.chunk.js"
   },
   {
-    "revision": "ca023f0364e834220fa5",
-    "url": "/atolye15-stajKampi/static/js/main.7272cdc3.chunk.js"
+    "revision": "d3e860fe2875b6f2210f",
+    "url": "/atolye15-stajKampi/static/js/main.55b4e7e3.chunk.js"
   },
   {
     "revision": "db05715e267b36b32021",

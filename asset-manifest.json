@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/atolye15-stajKampi/static/css/main.b100e6da.chunk.css",
-    "main.js": "/atolye15-stajKampi/static/js/main.7272cdc3.chunk.js",
-    "main.js.map": "/atolye15-stajKampi/static/js/main.7272cdc3.chunk.js.map",
+    "main.js": "/atolye15-stajKampi/static/js/main.55b4e7e3.chunk.js",
+    "main.js.map": "/atolye15-stajKampi/static/js/main.55b4e7e3.chunk.js.map",
     "runtime-main.js": "/atolye15-stajKampi/static/js/runtime-main.202a9e19.js",
     "runtime-main.js.map": "/atolye15-stajKampi/static/js/runtime-main.202a9e19.js.map",
     "static/js/2.b81c1fd8.chunk.js": "/atolye15-stajKampi/static/js/2.b81c1fd8.chunk.js",
     "static/js/2.b81c1fd8.chunk.js.map": "/atolye15-stajKampi/static/js/2.b81c1fd8.chunk.js.map",
     "index.html": "/atolye15-stajKampi/index.html",
-    "precache-manifest.53e11f264a4b32ff0d52e6fa4a8f070f.js": "/atolye15-stajKampi/precache-manifest.53e11f264a4b32ff0d52e6fa4a8f070f.js",
+    "precache-manifest.1ab97eb02ea794d4648bccf82f16c024.js": "/atolye15-stajKampi/precache-manifest.1ab97eb02ea794d4648bccf82f16c024.js",
     "service-worker.js": "/atolye15-stajKampi/service-worker.js",
     "static/css/main.b100e6da.chunk.css.map": "/atolye15-stajKampi/static/css/main.b100e6da.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.202a9e19.js",
     "static/js/2.b81c1fd8.chunk.js",
     "static/css/main.b100e6da.chunk.css",
-    "static/js/main.7272cdc3.chunk.js"
+    "static/js/main.55b4e7e3.chunk.js"
   ]
 }
